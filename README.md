@@ -19,9 +19,10 @@ This repository demonstrates how to extract ECM parameters from battery pulse-re
 ```bash
  Battery_ECM_Parameter_Estimation/
 │
-├── README.md                   # Repo information 
-├── Demo.m                      # Demo script showing usage on sample data
-├── twoStageLS.m                # Main function for 1RC/2RC/3RC parameter estimation
+├── README.md                   
+├── LICENSE
+├── Demo.m                      # Matlab demo script showing usage on sample data
+├── twoStageLS.m                # Matlab function for 1RC/2RC/3RC parameter estimation
 ├── SamplePulseRelaxationData.mat # Sample pulse-relaxation data
 ├── SamplePulseRelaxationFit.png # Example plot for pulse-relaxation fit
  ```   
