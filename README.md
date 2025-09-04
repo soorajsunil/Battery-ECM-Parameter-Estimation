@@ -14,18 +14,32 @@ This repository demonstrates how to extract ECM parameters from battery pulse-re
 
    Capacitances are then recovered as:  
    Cₙ = τₙ / Rₙ
-
+   
+## File Structure   
+```bash
+ Battery_ECM_Parameter_Estimation/
+│
+├── README.md                   # Repo information 
+├── Demo.m                      # Demo script showing usage on sample data
+├── twoStageLS.m                # Main function for 1RC/2RC/3RC parameter estimation
+├── SamplePulseRelaxationData.mat # Sample pulse-relaxation data
+├── SamplePulseRelaxationFit.png # Example plot for pulse-relaxation fit
+ ```   
 ## Usage
 Run demo:
 ```
 Battery_ECM_Parameter_Estimation/Demo.m
 ```
+or 
+
 Run function: 
 ```matlab
 [theta_1RC] = twoStageLS(vbatt, ibatt, t, '1RC');
 [theta_2RC] = twoStageLS(vbatt, ibatt, t, '2RC');
 [theta_3RC] = twoStageLS(vbatt, ibatt, t, '3RC');
 ```
+Note: The inputs (```vbatt```, ```ibatt```, ```t```) should come from a pulse–relaxation experiment, i.e., a discharge (or charge) pulse followed by a rest period.
+
 <p align="center">
   <img src="SamplePulseRelaxationFit.png" alt="Pulse Relaxation Fit" width="500">
 </p>
