@@ -19,8 +19,6 @@ This repository demonstrates how to extract ECM parameters from battery pulse-re
 [theta_2RC] = twoStageLS(vbatt, ibatt, t, '2RC');
 [theta_3RC] = twoStageLS(vbatt, ibatt, t, '3RC');
 ```
-
-
 <p align="center">
   <img src="SamplePulseRelaxationFit.png" alt="Pulse Relaxation Fit" width="500">
 </p>
