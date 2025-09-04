@@ -4,7 +4,7 @@ Parameter estimation of 1st, 2nd, and 3rd order RC equivalent circuit models (EC
 ## Overview
 This repository demonstrates how to extract ECM parameters from battery pulse-relaxation experiments:
 1. **Stage 1 (LS-1)** – Estimate RC time constants:  
-  τₙ =  Rₙ Cₙ , n=1,2,3
+  τₙ =  Rₙ Cₙ, n=1,2,3
 
 2. **Stage 2 (LS-2)** – With τₙ fixed, solve a linear least squares problem to estimate:  
    - Open-circuit voltage (OCV)  
@@ -16,6 +16,11 @@ This repository demonstrates how to extract ECM parameters from battery pulse-re
    Cₙ = τₙ / Rₙ
 
 ## Usage
+Run demo:
+```
+Battery_ECM_Parameter_Estimation/Demo.m
+```
+Run function: 
 ```matlab
 [theta_1RC] = twoStageLS(vbatt, ibatt, t, '1RC');
 [theta_2RC] = twoStageLS(vbatt, ibatt, t, '2RC');
