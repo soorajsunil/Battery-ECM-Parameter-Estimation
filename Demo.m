@@ -1,5 +1,6 @@
 clc, clear, close all;
-
+set(groot,'DefaultLineLineWidth',2);
+set(groot,'defaultAxesFontSize', 15); 
 %% Load data
 BattData = load('SamplePulseRelaxationData.mat');
 
@@ -19,7 +20,7 @@ C1    = theta_1RC(5);
 
 % voltage prediction
 i1    = currentRC(ibatt, t, R1*C1);
-v_1RC = OCV0 + ibatt*R0 + i1*R1 + kappa*trapz(t,ibatt);
+v_1RC = OCV0 + ibatt*R0 + i1*R1 + kappa*cumtrapz(t,ibatt);
 
 %%  2-RC estimation
 
@@ -35,7 +36,7 @@ C2  = theta_2RC(7);
 % voltage prediction
 i1    = currentRC(ibatt, t, R1*C1);
 i2    = currentRC(ibatt, t, R2*C2);
-v_2RC = OCV0 + ibatt*R0 + i1*R1 + i2*R2  + kappa*trapz(t,ibatt);
+v_2RC = OCV0 + ibatt*R0 + i1*R1 + i2*R2  + kappa*cumtrapz(t,ibatt);
 
 %%  3-RC
 
@@ -54,7 +55,7 @@ C3  = theta_3RC(9);
 i1    = currentRC(ibatt, t, R1*C1);
 i2    = currentRC(ibatt, t, R2*C2);
 i3    = currentRC(ibatt, t, R3*C3);
-v_3RC = OCV0 + ibatt*R0 + i1*R1 + i2*R2 + i3*R3 + kappa*trapz(t,ibatt);
+v_3RC = OCV0 + ibatt*R0 + i1*R1 + i2*R2 + i3*R3 + kappa*cumtrapz(t,ibatt);
 
 %%
 
@@ -64,7 +65,7 @@ nexttile(1)
 hold on; axis('padded'); grid on; box on;
 xlabel('Time (s)',Interpreter='latex'); ylabel('Voltage (V)',Interpreter='latex'); 
 legend(Location='best')
-plot(t-t(1),vbatt,'-',DisplayName='Measurements')
+plot(t-t(1),vbatt,'o',DisplayName='Measurements')
 plot(t-t(1),v_1RC,'--',DisplayName='1-RC model')
 plot(t-t(1),v_2RC,'--',DisplayName='2-RC model')
 plot(t-t(1),v_3RC,'--',DisplayName='3-RC model')
