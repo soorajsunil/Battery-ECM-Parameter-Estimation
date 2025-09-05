@@ -8,7 +8,7 @@ This repository demonstrates how to extract ECM parameters from battery pulse-re
 
 2. **Stage 2 (LS-2)** – With τₙ fixed, solve a linear least squares problem to estimate:  
    - Open-circuit voltage (OCV)  
-   - OCV slope term (κ)  
+   - OCV slope to capacity ratio (κ = dOCV/Q)  
    - Ohmic resistance (R₀)  
    - RC branch resistances (Rₙ, n=1,2,3)  
 
