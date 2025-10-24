@@ -1,19 +1,17 @@
 # Battery ECM Parameter Estimation
-Parameter estimation of 1st, 2nd, and 3rd order RC equivalent circuit models (ECMs) for lithium-ion batteries using a **two-stage linear least squares (LS)** approach with pulse–relaxation data.
+Parameter estimation of 1RC, 2RC, and 3RC equivalent-circuit models (ECMs) using a **two-stage least squares (two-stage LS)** approach from batch pulse–relaxation measurments.
 
 ## Overview
 This repository demonstrates how to extract ECM parameters from battery pulse-relaxation experiments:
-1. **Stage 1 (LS-1)** – Estimate RC time constants:  
-  τₙ =  Rₙ Cₙ, n=1,2,3
 
-2. **Stage 2 (LS-2)** – With τₙ fixed, solve a linear least squares problem to estimate:  
+Stage 1. **(LS-1)** – Estimate RC time constants:  τₙ =  Rₙ Cₙ; n= 1, 2, 3.
+
+Stage 2. **(LS-2)** – With τₙ fixed, solve a linear least squares problem to estimate:  
    - Open-circuit voltage (OCV)  
-   - OCV slope to capacity ratio (κ = dOCV/Q)  
+   - OCV slope to capacity ratio (κ = dOCV/Q); a bias term.
    - Ohmic resistance (R₀)  
-   - RC branch resistances (Rₙ, n=1,2,3)  
-
-   Capacitances are then recovered as:  
-   Cₙ = τₙ / Rₙ
+   - RC branch resistances (Rₙ, n = 1, 2, 3)
+   - Capacitances are then recovered as:  Cₙ = τₙ / Rₙ
    
 ## File Structure   
 ```bash
