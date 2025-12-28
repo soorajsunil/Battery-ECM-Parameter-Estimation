@@ -44,5 +44,9 @@ Note: The inputs (```vbatt```, ```ibatt```, ```t```) should come from a pulse–
 </p>
 
 ## Reference
-Two-Stage Least Squares for Equivalent-Circuit Parameter Estimation of Lithium-ion Batteries Using Pulse-Relaxation Excitation (under review) 
-Preprint: [10.36227/techrxiv.176404157.73691796/v1](https://www.techrxiv.org/users/860676/articles/1361821-two-stage-least-squares-for-equivalent-circuit-model-parameter-estimation-of-li-ion-batteries-using-pulse-relaxation-excitation?commit=869dd3acb54d150fa03d9d185568822458ed65a6) 
+**Two-Stage Least Squares for Equivalent-Circuit Model Parameter Estimation of Li-Ion Batteries Using Pulse-Relaxation Excitation**
+
+- **Journal (IEEE Transactions on Instrumentation and Measurement):** https://ieeexplore.ieee.org/document/11301817  
+- **Preprint:** https://doi.org/10.36227/techrxiv.176404157.73691796
+
+
